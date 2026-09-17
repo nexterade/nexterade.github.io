@@ -1,165 +1,110 @@
-# Cinematic Resume Experience
+# 🌿 nexterade — Media Garden, in bloom
 
-A production-ready cinematic portfolio/resume template built with Next.js, Tailwind CSS, and GSAP.
+Personal portfolio — built with Next.js, Tailwind CSS, and GSAP.
 
-Designed for developers and designers who want a high-end personal site that is:
+**Live:** [https://nexterade.github.io](https://nexterade.github.io)
 
-- easy to fork
-- fast to customize
-- free to deploy on GitHub Pages
+---
 
-## Live Demo
+## 🎯 About
 
-[https://amirho3inh.github.io/cinematic-resume-nextjs/](https://amirho3inh.github.io/cinematic-resume-nextjs/)
+Portfolio pribadi **nexterade** — Builder & Automation Enthusiast.
 
-## Why This Project
+**Vibe:** Moss green aesthetic, cinematic storytelling, terminal-native.
 
-Most portfolio templates are static cards with little personality.  
-This one is narrative-driven: scene-based sections, motion choreography, and visual rhythm.
+**Tagline:** *"Less clicks, more bloom. 🌿"*
 
-If you want your portfolio to feel like a directed experience (not just a list of blocks), this template is for you.
+---
 
-## Features
+## 🛠️ Tech Stack
 
-- Scene-based storytelling layout
-- Cinematic `Scene Navigator` overlay
-- GSAP-powered entry motion and scroll glide
-- Responsive across mobile and desktop
-- Section visibility toggles (`show/hide`) from one data file
-- GitHub profile + pinned open-source data snapshot at build time
-- Static export ready (`output: "export"`)
-- Automatic deploy to GitHub Pages via GitHub Actions
+- **Framework:** Next.js 16 (App Router)
+- **Styling:** Tailwind CSS
+- **Animation:** GSAP + ScrollTrigger
+- **Deploy:** GitHub Pages + GitHub Actions
+- **Fonts:** Syne, Manrope, Space Mono
 
-## Sections Included
+---
 
-- Hero / Opening
-- About / Identity
-- Journey Timeline
-- Skills
-- Education
-- Open Source (Pinned Repositories)
-- Projects
-- Achievements
-- Blogs
-- Podcast (custom styled audio player)
-- GitHub Presence
-- Experience Highlights
-- Philosophy
-- Contact
+## ✨ Features
 
-## Tech Stack
+- 🎬 Scene-based cinematic layout
+- 🎨 GSAP scroll animations
+- 🌿 Dark mode + moss green theme
+- ⚙️ Config-driven — edit `data/resumeContent.js`, semua berubah
+- 📦 Static export + auto-deploy via GitHub Actions
+- 🔖 Custom favicon (moss circle logo)
 
-- Next.js (App Router)
-- JavaScript
-- Tailwind CSS
-- GSAP + ScrollTrigger
+---
 
-## Quick Start
+## 📂 Struktur
+
+```
+.
+├── app/                    # Next.js App Router
+│   ├── layout.js           # Root layout + fonts
+│   ├── page.js             # Main page
+│   └── icon.svg            # Favicon
+├── components/
+│   ├── sections/           # Section components
+│   ├── LoaderOverlay.js    # Loading screen
+│   └── Footer.js           # Footer
+├── data/
+│   ├── resumeContent.js    # ⭐ EDIT DI SINI — semua data
+│   ├── githubSnapshot.json # GitHub stats
+│   └── themeConfig.json    # Theme colors & fonts
+├── public/                 # Static assets
+└── next.config.mjs         # Next.js config
+```
+
+---
+
+## ✏️ Edit Content
+
+**Semua konten di-drive dari `data/resumeContent.js`** — edit file itu — seluruh website berubah.
+
+- **Nama, title, tagline** → `personal`
+- **Pengalaman** → `journey`
+- **Skill** → `skills`
+- **Project** → `projects`
+- **Kontak** → `contact`
+- **GitHub stats** → `githubProfile` & `data/githubSnapshot.json`
+
+---
+
+## 🚀 Local Development
 
 ```bash
+# Install dependencies
 npm install
-npm run dev
+
+# Dev server (Webpack — Turbopack gak support Android/arm64)
+npm run dev -- --webpack
+
+# Build static
+npm run build -- --webpack
 ```
 
-Open `http://localhost:3000`
+Buka browser: `http://localhost:3000`
 
-Production build:
+---
 
+## 📦 Deploy
+
+Auto-deploy via **GitHub Actions** — tiap push ke `main` — rebuild & deploy.
+
+Manual deploy:
 ```bash
-npm run build
-npm run start
+npm run build -- --webpack
+# Output di folder `out/`
 ```
 
-## Project Map
+---
 
-```txt
-app/
-  layout.js
-  page.js
-  globals.css
-  robots.js
-  sitemap.js
-components/
-  Navigation.js
-  SectionGlideController.js
-  sections/
-data/
-  resumeContent.js
-  themeConfig.json
-  githubSnapshot.json
-scripts/
-  fetch-github-snapshot.mjs
-.github/workflows/
-  deploy-pages.yml
-```
+## 📜 License
 
-## Customize Content Fast
+MIT — free to use, fork, modify.
 
-Main file: [`data/resumeContent.js`](./data/resumeContent.js)
+---
 
-Edit these first:
-
-- `sectionVisibility` to enable/disable sections
-- `personal` for hero/about identity
-- `journey`, `skills`, `education`, `projects`, `achievements`, `blogs`, `podcasts`
-- `contact`
-- `githubProfile.username`
-- `siteMeta`
-
-Theme and typography:
-
-- [`data/themeConfig.json`](./data/themeConfig.json)
-
-Images:
-
-- replace files in `public/` (example: `profile-photo.jpg`, `og-profile.jpg`)
-
-## GitHub Pages (Fully Automatic)
-
-This repository is configured for static GitHub Pages deployment.
-
-- static export config: [`next.config.mjs`](./next.config.mjs)
-- GitHub snapshot script: [`scripts/fetch-github-snapshot.mjs`](./scripts/fetch-github-snapshot.mjs)
-- deploy workflow: [`.github/workflows/deploy-pages.yml`](./.github/workflows/deploy-pages.yml)
-
-### One-time setup
-
-1. Open `Settings -> Pages` in your repo.
-2. Set `Source` to `GitHub Actions`.
-3. Keep default branch as `main` (or update workflow trigger).
-
-### CI/CD flow on every push to `main`
-
-1. Install dependencies (`npm ci`)
-2. Build GitHub snapshot (`npm run snapshot:github`)
-3. Build static site (`npm run build`, output in `out/`)
-4. Deploy to GitHub Pages
-
-## Fork -> Edit -> Publish (For Everyone)
-
-1. Fork this repo.
-2. Clone your fork.
-3. Edit [`data/resumeContent.js`](./data/resumeContent.js) with your own profile data.
-4. Replace images in `public/`.
-5. Commit and push to `main`.
-6. Enable Pages with `GitHub Actions` in repo settings.
-7. Wait for workflow `Deploy To GitHub Pages`.
-8. Open: `https://<your-username>.github.io/<your-repo>/`
-
-## How To Get More Visibility
-
-To help people actually discover your project:
-
-1. Use a strong repository name and clear tagline.
-2. Add screenshots/GIFs in the README (top of file).
-3. Pin the repo on your GitHub profile.
-4. Add topics/tags (`portfolio`, `nextjs`, `tailwindcss`, `gsap`, `github-pages`).
-5. Share on X, Reddit, Dev.to, Hashnode, and LinkedIn with a short demo clip.
-6. Write a short “How I built this” post and link the repo.
-7. Keep commits and releases active so GitHub shows recent activity.
-
-## Notes
-
-- Keep `siteMeta.siteUrl` aligned with your final public URL.
-- `robots.txt` and `sitemap.xml` are static-compatible.
-- If GitHub API rate limits happen during snapshot fetch, fallback data is used automatically.
+**Made with 🌿 + 🐍 + 📱 + ☕ + sedikit chaos.**
