@@ -1,0 +1,34 @@
+{
+  "base": {
+    "bg0": "#06050d",
+    "bg1": "#100f1f",
+    "surfaceA": "#111223",
+    "surfaceB": "#080913",
+    "textMain": "#e9ecf8",
+    "textSoft": "#bfc4da"
+  },
+  "accent": {
+    "violet": "#9f5cff",
+    "cyan": "#37f4ff",
+    "magenta": "#ff4db8",
+    "amber": "#ffb979"
+  },
+  "background": {
+    "start": "#05040b",
+    "mid": "#090917",
+    "end": "#06060f"
+  },
+  "font": {
+    "//display": "syne | outfit | spaceGrotesk",
+    "display": "syne",
+    "//body": "manrope | inter | sora",
+    "body": "manrope",
+    "//mono": "spaceMono | jetbrainsMono",
+    "mono": "spaceMono"
+  },
+  "loader": {
+    "background": "#06050d",
+    "text": "#e9ecf8",
+    "textValue": "A."
+  }
+}

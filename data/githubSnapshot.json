@@ -1,0 +1,36 @@
+{
+  "updatedAt": "2026-09-17T00:00:00.000Z",
+  "username": "nexterade",
+  "profile": {
+    "login": "nexterade",
+    "bio": "Builder & Automation Enthusiast — Python, CLI, Termux. Creator of LUMOSS. 🌿",
+    "avatarUrl": "https://github.com/nexterade.png",
+    "url": "https://github.com/nexterade",
+    "followers": 0,
+    "following": 0,
+    "publicRepos": 3
+  },
+  "pinnedRepos": [
+    {
+      "name": "lumoss",
+      "description": "🌿 Media Garden, in bloom — Automated Media Uploader v7 untuk Termux Android.",
+      "language": "Python",
+      "stars": 0,
+      "url": "https://github.com/nexterade/lumoss"
+    },
+    {
+      "name": "auto-release-wizard",
+      "description": "Toolkit universal buat rilis project + 12 tools bantu. README generator, changelog viewer, project doctor, code scanner, dan banyak lagi.",
+      "language": "Python",
+      "stars": 0,
+      "url": "https://github.com/nexterade/auto-release-wizard"
+    },
+    {
+      "name": "nexterade.github.io",
+      "description": "Portfolio website — Cinematic Resume + GitHub Pages. Config-driven, dark mode, moss green aesthetic.",
+      "language": "JavaScript",
+      "stars": 0,
+      "url": "https://github.com/nexterade/nexterade.github.io"
+    }
+  ]
+}

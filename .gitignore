@@ -1,0 +1,12 @@
+# Build output
+.next/
+out/
+node_modules/
+
+# Env
+.env
+.env.local
+
+# Cache
+.cache/
+.turbo/
