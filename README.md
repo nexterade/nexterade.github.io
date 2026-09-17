@@ -1,4 +1,4 @@
-# 🌿 nexterade — Media Garden, in bloom
+# 🌿 nexterade — Media Garden, in blooms
 
 Personal portfolio — built with Next.js, Tailwind CSS, and GSAP.
 
