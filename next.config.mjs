@@ -1,7 +1,3 @@
-const isGithubActions = Boolean(process.env.GITHUB_ACTIONS);
-const repoName = process.env.GITHUB_REPOSITORY?.split("/")[1] || "";
-const configuredBasePath = process.env.NEXT_PUBLIC_BASE_PATH || (isGithubActions && repoName ? `/${repoName}` : "");
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -10,8 +6,8 @@ const nextConfig = {
     unoptimized: true
   },
   trailingSlash: true,
-  basePath: configuredBasePath,
-  assetPrefix: configuredBasePath || undefined
+  basePath: "",
+  assetPrefix: ""
 };
 
 export default nextConfig;
